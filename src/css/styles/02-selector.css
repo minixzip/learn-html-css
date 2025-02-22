@@ -1,6 +1,7 @@
 body {
   background-color: #ffc;
 }
+
 /* 태그 선택자 */
 p {
   color: red;
@@ -8,25 +9,29 @@ p {
   &:hover {
     background-color: skyblue;
   }
+
   &:focus {
     border: 10px solid red;
   }
 }
+
 /* 클래스 선택자 */
 .like {
   color: green;
 }
 
-/*아이디 선택자 */
+/* 아이디 선택자 */
 #lion {
   color: blue;
 }
+
 /* 속성 선택자 */
 [title] {
   color: purple;
 }
 
-a[href^='https'] {
+a[href^="https://"]
+{
   text-decoration: none;
 }
 
