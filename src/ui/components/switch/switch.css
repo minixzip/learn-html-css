@@ -11,6 +11,7 @@
 
   position: relative;
   display: inline-flex;
+  justify-content: end;
   width: var(--size);
   inline-size: var(--size);
 
@@ -44,7 +45,7 @@
 
 /* 슬라이드 버튼 유형의 스위치 컴포넌트 */
 .toggle-switch {
-  --size: 4rem;
+  --size: 3rem;
 
   display: inline-flex;
   width: var(--size);
@@ -54,7 +55,7 @@
   border-radius: calc(var(--size) / 2);
   background: var(--gray-400);
   position: relative;
-  /* transition: background 0.3s; */
+  transition: background 0.3s;
 
   &:has(:checked) {
     background: var(--green-500);
@@ -64,13 +65,13 @@
     box-shadow: 0 0 0 1px var(--blue-900);
   }
 
-  /* input {
+  /* input{
     margin: 0;
     appearance: none;
-    position: absolute;
-    top: 0px;
+    position:absolute;
+    top:0px;
     inset-block-start: 0px;
-    left: 0px;
+    left:0px;
     inset-inline-start: 0px;
     transition: translate 0.3s;
     width: calc(50% - 1px);
@@ -79,39 +80,40 @@
     background: var(--white);
     border-radius: 50%;
 
-    &:checked {
+    &:checked{
       translate: calc(100% + 2px) 0;
-    } */
-}
+    }
+  } */
 
-/* label {
+  /* label{
     width: 100%;
     inline-size: 100%;
     height: 100%;
     block-size: 100%;
   } */
-input {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  appearance: none;
-}
 
-label {
-  margin: 0;
-  width: calc(50% - 1px);
-  aspect-ratio: 1/1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--white);
-  border-radius: 50%;
-  transition: translate 0.3s;
-}
+  input {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    appearance: none;
+  }
 
-input:checked + label {
-  translate: calc(100% + 2px) 0;
+  label {
+    width: calc(50% - 1px);
+    aspect-ratio: 1/1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--white);
+    border-radius: 50%;
+    transition: translate 0.3s;
+  }
+
+  input:checked + label {
+    translate: calc(100% + 2px) 0;
+  }
 }
