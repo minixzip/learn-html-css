@@ -1,0 +1,27 @@
+@import '/src/common/modern-reset.css';
+@import '/src/common/theme.css';
+@import '/src/common/a11y.css';
+@import '/src/common/base.css';
+
+.masonry-layout {
+  padding: 1em;
+  column-width: 15rem;
+}
+figure {
+  margin-block: 20px;
+  border: 1px solid gray;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+  box-shadow: 0 0 8px 1px var(--pastel-gray);
+
+  figcaption {
+    display: block;
+    position: absolute;
+    width: 100%;
+    column-span: 15em;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
+    padding: 1em;
+  }
+}
